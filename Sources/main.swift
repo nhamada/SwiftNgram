@@ -1,1 +1,2 @@
-print("Hello, world!")
+let instance = SwiftNgram()
+instance.run()
