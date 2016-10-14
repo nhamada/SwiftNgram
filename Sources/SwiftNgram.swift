@@ -28,7 +28,9 @@ public struct SwiftNgram {
             let start = string.index(string.startIndex, offsetBy: index)
             let end = string.index(start, offsetBy: length)
             let word = string.substring(with: Range(uncheckedBounds: (start, end)))
-            words.append(word)
+            if !words.contains(word) {
+                words.append(word)
+            }
         }
         return words
     }
